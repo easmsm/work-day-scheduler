@@ -10,14 +10,14 @@ document.getElementById("currentDay").innerHTML = currentDay;
 
 //Saving Tasks (from Taskinator activity)
 
-var tasks = {};
+/*var tasks = {};
 
 var loadTasks = function() {
   tasks = JSON.parse(localStorage.getItem("tasks"));
 
 var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-};
+}; */
 
 //End Saving Tasks
 
@@ -33,15 +33,15 @@ var auditTask = function(taskEl) {
   // convert to moment object at 5:00pm
   var time = moment(hour, "hh");
 
-  // remove any old classes from element
-  $(taskEl).removeClass();
+  /* remove any old classes from element
+  $(taskEl).removeClass(); */
 
   // apply new class if task is near/over due date
   if (moment().isAfter(time)) {
     $(taskEl).addClass("future");
   } else if (Math.abs(moment().diff(time, "past")) <= 2) {
     $(taskEl).addClass("past");
-  } else (moment().currentHour('hh');) {
+  } else (moment().moment.hour('hh')); {
     $(taskEl).addClass("present");
   }
 };
