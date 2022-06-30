@@ -6,59 +6,37 @@ currentDay = moment().format('dddd, MMMM Do YYYY'); {
 
 document.getElementById("currentDay").innerHTML = currentDay;
 
-// from the Taskinator code
+/*var myDiv = document.getElementById("btn");
+var button = document.createElement("BUTTON");
+myDiv.appendChild(button);*/
 
-var tasks = {};
+/*let btn = document.createElement("button");
+btn.innerHTML = 'Save';
+document.body.appendChild(btn);
 
-var tasks = {};
+//save tasks locally
+  var saveTasks = function() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  };
 
-var createTask = function(taskText, taskDate, taskList) {
-  // create elements that make up a task item
-  var taskLi = $("<li>").addClass("list-group-item");
-  var taskSpan = $("<span>")
-    .addClass("badge badge-primary badge-pill")
-    .text(taskDate);
-  var taskP = $("<p>")
-    .addClass("m-1")
-    .text(taskText);
+/* save button was clicked
+$("#task-form-modal .btn-save").click(function() {
+  // get form values
+  var taskText = $("#modalTaskDescription").val();
+  var taskDate = $("#modalDueDate").val();
 
-  // append span and p element to parent li
-  taskLi.append(taskSpan, taskP);
+  if (taskText && taskDate) {
+    createTask(taskText, taskDate, "toDo");
 
-  // check due date
-  auditTask(taskLi);
+    // close modal
+    $("#task-form-modal").modal("hide");
 
-  // append to ul list on the page
-  $("#list-" + taskList).append(taskLi);
-};
+    // save in tasks array
+    tasks.toDo.push({
+      text: taskText,
+      date: taskDate
+    });
 
-var loadTasks = function() {
-    tasks = JSON.parse(localStorage.getItem("tasks"));
-  
-    // if nothing in localStorage, create a new object to track all task status arrays
-    if (!tasks) {
-      tasks = {
-        nineAm: [],
-        tenAm: [],
-        elevenAm: [],
-        twelvePm: [],
-        onePm: [],
-        twoPm: [],
-        threePm: [],
-        fourPm: [],
-        fivePm: [],
-      };
-    }
-    // loop over object properties
-    $.each(tasks, function(list, arr) {
-        // then loop over sub-array
-        arr.forEach(function(task) {
-          createTask(task.text, task.date, list);
-        });
-      });
-    };
-
-    //save tasks locally
-    var saveTasks = function() {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-      };
+    saveTasks();
+  }
+}); */
