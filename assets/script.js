@@ -62,38 +62,64 @@ var time = document.getElementById("four");
 var time = document.getElementById("five");*/
 
 
-
-/*var myDiv = document.getElementById("btn");
-var button = document.createElement("BUTTON");
-myDiv.appendChild(button);*/
-
-/*let btn = document.createElement("button");
-btn.innerHTML = 'Save';
-document.body.appendChild(btn);
-
 //save tasks locally
   var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
   };
 
-/* save button was clicked
-$("#task-form-modal .btn-save").click(function() {
-  // get form values
-  var taskText = $("#modalTaskDescription").val();
-  var taskDate = $("#modalDueDate").val();
+$(".saveBtnNine").click(function() {
+  var taskText = $("#nine").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
 
-  if (taskText && taskDate) {
-    createTask(taskText, taskDate, "toDo");
+  $(".saveBtnTen").click(function() {
+  var taskText = $("#ten").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
 
-    // close modal
-    $("#task-form-modal").modal("hide");
+  $(".saveBtnEleven").click(function() {
+  var taskText = $("#eleven").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
 
-    // save in tasks array
-    tasks.toDo.push({
-      text: taskText,
-      date: taskDate
-    });
+  $(".saveBtnTwelve").click(function() {
+  var taskText = $("#twelve").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
+
+  $(".saveBtnOne").click(function() {
+  var taskText = $("#one").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
+
+  $(".saveBtnTwo").click(function() {
+  var taskText = $("#two").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
+
+  $(".saveBtnThree").click(function() {
+  var taskText = $("#three").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
+
+  $(".saveBtnFour").click(function() {
+  var taskText = $("#four").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
+
+  $(".saveBtnFive").click(function() {
+  var taskText = $("#five").val();
+  tasks.toDo.push({
+    text: taskText,
+  });
 
     saveTasks();
-  }
-}); */
+  }); 
